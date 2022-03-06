@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p> Confirm Delete "{{snack.name}}"?</p>
+    <input type="'submit" value="OK">
+</form>
+
+<p><a href="{% url 'snack_list' %}">Back to Snack List</a></p>
+  {% endblock content %}
